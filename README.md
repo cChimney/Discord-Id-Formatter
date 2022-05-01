@@ -4,7 +4,7 @@ This program seperates old user ids from new user ids, saw someone selling this 
 
 ---
 
-- very fast
+- very fast (1000/1.3s)
 - lightweight
 - made by cChimney
 - free
