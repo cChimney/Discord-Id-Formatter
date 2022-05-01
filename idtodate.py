@@ -1,5 +1,8 @@
 from py_mini_racer import py_mini_racer
 import time, datetime
+
+start_time = time.time()
+
 ctx = py_mini_racer.MiniRacer()
 
 def checkDate(id):
@@ -29,9 +32,11 @@ def worker(age):
     with open('olderIds.txt', 'a+') as f:
         for id in Older:
             f.write(f"{id}\n")
+    print(f'Took {time.time() - start_time}s to sort {len(ids)} ids\nTool made by https://github.com/cChimney')
 
 try:
-    age = input("Save ids that are older than what date? Example 15/12/2015 (european dates)\n")
+    print("ID Sorter, made by cChimney. https://github.com/cChimney")
+    age = input("Save ids that are older than what date? Example 15/12/2015 (european dates)\n> ")
     worker(age)
 except Exception as err:
     print(err)
